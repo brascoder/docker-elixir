@@ -19,7 +19,10 @@ RUN apt-get update -y\
 RUN wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb\
   && dpkg -i erlang-solutions_1.0_all.deb\
   && apt-get update\
-  && apt-get install -y elixir\
+  && apt-get install -y\
+    elixir\
+    erlang-dev\
+    erlang-parsetools\
   && apt-get clean\
   && rm erlang-solutions_1.0_all.deb\
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
