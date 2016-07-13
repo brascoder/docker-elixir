@@ -25,4 +25,4 @@ RUN wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb\
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install Hex package manager
-RUN mix local.hex --force
+RUN mix local.hex --force && mix local.rebar --force
